@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 5 UI Components
 
-## Getting Started
+A collection of 5 essential, polished UI components built with **React**, **Tailwind CSS**, and **shadcn/ui**. Designed to be "copy-paste-ready" via the shadcn CLI, making it incredibly easy to integrate into your existing projects.
 
-First, run the development server:
+## 🚀 Features
+
+- **Instant Integration:** Use the shadcn CLI to add components in seconds.
+- **Modern Stack:** Built with modern React 19 and Tailwind CSS best practices.
+- **Fully Customizable:** Easily tweak the code to match your brand's style.
+- **Production Ready:** Polished and responsive designs for real-world applications.
+
+## 📦 Available Components
+
+| Component | Description |
+| :--- | :--- |
+| **Hero** | High-conversion hero section with CTA buttons. |
+| **Pricing Table** | 3-tier pricing structure for SaaS products. |
+| **Chat Bubble** | Sleek UI for AI chat interfaces. |
+| **Auth Form** | Secure-looking sign-in form with OAuth support. |
+| **Dashboard Card** | Metric cards with trend indicators. |
+
+## 🛠 Usage
+
+To add a component to your project, run the following command in your terminal:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dlx shadcn@latest add https://5-ui-components-szn.vercel.app/<component-name>.json
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*Example for Hero Section:*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dlx shadcn@latest add https://5-ui-components-szn.vercel.app/r/hero.json
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+## 🌐 Live Demo
 
-To learn more about Next.js, take a look at the following resources:
+Check out the components in action here: https://5-ui-components-szn.vercel.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚖️ License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the **MIT License**. Feel free to use these components in your personal or commercial projects.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Shahzaib Nawaz
