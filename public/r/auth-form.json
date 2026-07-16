@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "auth-form",
+  "title": "Auth Form",
+  "description": "A sign-in form with OAuth and email/password fields.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "components/blocks/auth-form.tsx",
+      "content": "\"use client\";\r\n\r\nimport { Button } from \"@/components/ui/button\";\r\nimport {\r\n  Card,\r\n  CardContent,\r\n  CardDescription,\r\n  CardHeader,\r\n  CardTitle,\r\n} from \"@/components/ui/card\";\r\nimport { Input } from \"@/components/ui/input\";\r\nimport { Label } from \"@/components/ui/label\";\r\n\r\nfunction GoogleIcon({ className }: { className?: string }) {\r\n  return (\r\n    <svg\r\n      className={className}\r\n      aria-hidden=\"true\"\r\n      focusable=\"false\"\r\n      data-prefix=\"fab\"\r\n      data-icon=\"google\"\r\n      role=\"img\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n      viewBox=\"0 0 488 512\"\r\n    >\r\n      <path\r\n        fill=\"currentColor\"\r\n        d=\"M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z\"\r\n      />\r\n    </svg>\r\n  );\r\n}\r\n\r\nexport function AuthForm() {\r\n  return (\r\n    <Card className=\"mx-auto w-full max-w-sm shadow-sm\">\r\n      <CardHeader className=\"space-y-2 text-center\">\r\n        <CardTitle className=\"text-2xl\">Welcome back</CardTitle>\r\n        <CardDescription>Sign in to your account to continue</CardDescription>\r\n      </CardHeader>\r\n\r\n      <CardContent className=\"flex flex-col gap-4\">\r\n        {/* OAuth buttons */}\r\n        <Button variant=\"outline\" className=\"w-full\">\r\n          <GoogleIcon className=\"mr-2 h-4 w-4 shrink-0\" />\r\n          Continue with Google\r\n        </Button>\r\n\r\n        {/* Divider */}\r\n        <div className=\"relative my-2\">\r\n          <div className=\"absolute inset-0 flex items-center\">\r\n            <span className=\"w-full border-t border-border\" />\r\n          </div>\r\n          <div className=\"relative flex justify-center text-xs uppercase\">\r\n            <span className=\"bg-card px-2 text-muted-foreground\">\r\n              or continue with\r\n            </span>\r\n          </div>\r\n        </div>\r\n\r\n        {/* Email/password */}\r\n        <div className=\"flex flex-col gap-2\">\r\n          <Label htmlFor=\"email\">Email</Label>\r\n          <Input id=\"email\" type=\"email\" placeholder=\"you@email.com\" />\r\n        </div>\r\n\r\n        <div className=\"flex flex-col gap-2\">\r\n          <div className=\"flex items-center justify-between\">\r\n            <Label htmlFor=\"password\">Password</Label>\r\n            <a\r\n              href=\"#\"\r\n              className=\"text-xs text-muted-foreground hover:text-foreground\"\r\n            >\r\n              Forgot password?\r\n            </a>\r\n          </div>\r\n          <Input id=\"password\" type=\"password\" placeholder=\"••••••••\" />\r\n        </div>\r\n\r\n        <Button className=\"mt-2 w-full\">Sign in</Button>\r\n\r\n        <p className=\"text-center text-sm text-muted-foreground\">\r\n          Don&apos;t have an account?{\" \"}\r\n          <a href=\"#\" className=\"text-foreground underline underline-offset-4\">\r\n            Sign up\r\n          </a>\r\n        </p>\r\n      </CardContent>\r\n    </Card>\r\n  );\r\n}",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

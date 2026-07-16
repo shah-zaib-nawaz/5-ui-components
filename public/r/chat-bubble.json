@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat-bubble",
+  "title": "Chat Bubble",
+  "description": "AI chat message bubbles for user and assistant roles.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "components/blocks/chat-bubble.tsx",
+      "content": "import { Bot, User } from \"lucide-react\";\r\n\r\ninterface ChatBubbleProps {\r\n  role: \"user\" | \"assistant\";\r\n  message: string;\r\n}\r\n\r\nexport function ChatBubble({ role, message }: ChatBubbleProps) {\r\n  const isUser = role === \"user\";\r\n\r\n  return (\r\n    <div\r\n      className={`flex w-full gap-3 ${isUser ? \"flex-row-reverse\" : \"flex-row\"}`}\r\n    >\r\n      {/* Avatar */}\r\n      <div\r\n        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${\r\n          isUser\r\n            ? \"bg-emerald-500 text-white\"\r\n            : \"bg-muted text-muted-foreground\"\r\n        }`}\r\n      >\r\n        {isUser ? <User className=\"h-4 w-4\" /> : <Bot className=\"h-4 w-4\" />}\r\n      </div>\r\n\r\n      {/* Message bubble */}\r\n      <div\r\n        className={`max-w-[75%] rounded-2xl px-4 py-2.5 text-sm ${\r\n          isUser\r\n            ? \"rounded-tr-sm bg-emerald-500 text-white\"\r\n            : \"rounded-tl-sm bg-muted text-foreground\"\r\n        }`}\r\n      >\r\n        {message}\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n\r\n// A demo wrapper so people can see it in action\r\nexport function ChatBubbleDemo() {\r\n  return (\r\n    <div className=\"mx-auto flex max-w-lg flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm\">\r\n      <ChatBubble role=\"user\" message=\"Explain React in one line.\" />\r\n      <ChatBubble\r\n        role=\"assistant\"\r\n        message=\"React is a JavaScript library for building user interfaces using reusable components.\"\r\n      />\r\n      <ChatBubble role=\"user\" message=\"Nice, thanks!\" />\r\n    </div>\r\n  );\r\n}",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

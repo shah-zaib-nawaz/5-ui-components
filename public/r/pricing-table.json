@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-table",
+  "title": "Pricing Table",
+  "description": "A 3-tier pricing table with a highlighted popular plan.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "components/blocks/pricing-table.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\r\nimport { Check } from \"lucide-react\";\r\n\r\nconst plans = [\r\n  {\r\n    name: \"Personal\",\r\n    price: \"$99\",\r\n    description: \"For solo developers and side projects.\",\r\n    features: [\"1 project\", \"Lifetime access\", \"Community support\", \"Free updates\"],\r\n    popular: false,\r\n  },\r\n  {\r\n    name: \"Pro\",\r\n    price: \"$199\",\r\n    description: \"For professionals shipping real products.\",\r\n    features: [\r\n      \"Unlimited projects\",\r\n      \"Lifetime access\",\r\n      \"Priority support\",\r\n      \"Free updates\",\r\n      \"AI components\",\r\n    ],\r\n    popular: true,\r\n  },\r\n  {\r\n    name: \"Agency\",\r\n    price: \"$499\",\r\n    description: \"For teams and client work.\",\r\n    features: [\r\n      \"Everything in Pro\",\r\n      \"Client projects\",\r\n      \"Team license\",\r\n      \"1-on-1 onboarding\",\r\n    ],\r\n    popular: false,\r\n  },\r\n];\r\n\r\nexport function PricingTable() {\r\n  return (\r\n    <section className=\"px-4 py-20 md:px-6\">\r\n      <div className=\"mx-auto max-w-2xl text-center\">\r\n        <h2 className=\"text-3xl font-bold tracking-tight text-foreground sm:text-4xl\">\r\n          Simple, transparent pricing\r\n        </h2>\r\n        <p className=\"mt-4 text-muted-foreground\">\r\n          Pay once. Own it forever. No subscriptions.\r\n        </p>\r\n      </div>\r\n\r\n      <div className=\"mx-auto mt-14 grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3\">\r\n        {plans.map((plan) => (\r\n          <div\r\n            key={plan.name}\r\n            className={`relative flex flex-col rounded-2xl border p-8 shadow-sm ${\r\n              plan.popular\r\n                ? \"border-emerald-500 shadow-lg shadow-emerald-500/10 dark:border-emerald-400 dark:shadow-emerald-400/10\"\r\n                : \"border-border\"\r\n            }`}\r\n          >\r\n            {plan.popular && (\r\n              <span className=\"absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white dark:bg-emerald-400 dark:text-emerald-950\">\r\n                Most popular\r\n              </span>\r\n            )}\r\n\r\n            <h3 className=\"text-lg font-semibold text-foreground\">{plan.name}</h3>\r\n            <p className=\"mt-2 text-sm text-muted-foreground\">\r\n              {plan.description}\r\n            </p>\r\n\r\n            <div className=\"mt-6 flex items-baseline gap-1\">\r\n              <span className=\"text-4xl font-bold text-foreground\">\r\n                {plan.price}\r\n              </span>\r\n              <span className=\"text-muted-foreground\">one-time</span>\r\n            </div>\r\n\r\n            <ul className=\"mt-8 flex flex-1 flex-col gap-3\">\r\n              {plan.features.map((feature) => (\r\n                <li\r\n                  key={feature}\r\n                  className=\"flex items-center gap-3 text-sm text-foreground\"\r\n                >\r\n                  <Check className=\"h-4 w-4 shrink-0 text-emerald-500 dark:text-emerald-400\" />\r\n                  {feature}\r\n                </li>\r\n              ))}\r\n            </ul>\r\n\r\n            <Button\r\n              className=\"mt-8 w-full\"\r\n              variant={plan.popular ? \"default\" : \"outline\"}\r\n            >\r\n              Get {plan.name}\r\n            </Button>\r\n          </div>\r\n        ))}\r\n      </div>\r\n    </section>\r\n  );\r\n}",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

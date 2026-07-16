@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero",
+  "title": "Hero Section",
+  "description": "A polished hero section with gradient headline and CTA buttons.",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "components/blocks/hero.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\r\n\r\nexport function Hero() {\r\n  return (\r\n    <section className=\"relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden px-4 py-20 text-center md:px-6\">\r\n      {/* Background glow */}\r\n      <div\r\n        aria-hidden\r\n        className=\"pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.15),transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(52,211,153,0.15),transparent_60%)]\"\r\n      />\r\n\r\n      {/* Small badge */}\r\n      <div className=\"mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-sm\">\r\n        <span className=\"h-2 w-2 rounded-full bg-emerald-500 animate-pulse\" />\r\n        Now in public beta\r\n      </div>\r\n\r\n      {/* Headline */}\r\n      <h1 className=\"max-w-3xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl\">\r\n        Build your SaaS{\" \"}\r\n        <span className=\"bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent dark:from-emerald-300 dark:to-teal-400\">\r\n          in days, not months\r\n        </span>\r\n      </h1>\r\n\r\n      {/* Subtext */}\r\n      <p className=\"mt-6 max-w-xl text-base text-muted-foreground sm:text-lg md:text-xl\">\r\n        Production-ready components and templates so you can ship faster and\r\n        focus on what makes your product unique.\r\n      </p>\r\n\r\n      {/* CTA buttons */}\r\n      <div className=\"mt-10 flex flex-col gap-3 sm:flex-row\">\r\n        <Button size=\"lg\" className=\"px-8\">\r\n          Get started\r\n        </Button>\r\n        <Button size=\"lg\" variant=\"outline\" className=\"px-8\">\r\n          View components\r\n        </Button>\r\n      </div>\r\n    </section>\r\n  );\r\n}",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

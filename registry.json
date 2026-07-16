@@ -1,0 +1,75 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "yourbrand",
+  "homepage": "https://yourbrand.com",
+  "items": [
+    {
+      "name": "hero",
+      "type": "registry:block",
+      "title": "Hero Section",
+      "description": "A polished hero section with gradient headline and CTA buttons.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/blocks/hero.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-table",
+      "type": "registry:block",
+      "title": "Pricing Table",
+      "description": "A 3-tier pricing table with a highlighted popular plan.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/blocks/pricing-table.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chat-bubble",
+      "type": "registry:block",
+      "title": "Chat Bubble",
+      "description": "AI chat message bubbles for user and assistant roles.",
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "components/blocks/chat-bubble.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "auth-form",
+      "type": "registry:block",
+      "title": "Auth Form",
+      "description": "A sign-in form with OAuth and email/password fields.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "card", "input", "label"],
+      "files": [
+        {
+          "path": "components/blocks/auth-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dashboard-card",
+      "type": "registry:block",
+      "title": "Dashboard Card",
+      "description": "A stat card showing a metric with trend indicator.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "components/blocks/dashboard-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
